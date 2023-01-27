@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Harry Potter and the Philosopher's Stone",
+      "author": "J. K. Rowling",
+      "cost": 524
+    },
+    {
+      "id": 2,
+      "author": "Lewis Carroll",
+      "name": "Alice's Adventures in Wonderland",
+      "cost": 3408
+    },
+    {
+      "id": 3,
+      "author": "aarr",
+      "name": "alioo",
+      "cost": 1200
+    }
+  ]
+}
