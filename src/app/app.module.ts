@@ -12,6 +12,7 @@ import { appReducer } from './shared/store/app.reducer';
 import { PenComponent } from './pen/pen.component';
 import { reducers, metaReducers } from './reducers';
 import { CurrentconditionsEffects } from './effects/currentconditions.effects';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,14 @@ import { CurrentconditionsEffects } from './effects/currentconditions.effects';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }), 
     StoreModule.forRoot(reducers, { metaReducers }), //test ali
     !environment.production ? StoreDevtoolsModule.instrument() : [], //test ali
-    EffectsModule.forFeature([CurrentconditionsEffects])  //test ali
+    EffectsModule.forFeature([CurrentconditionsEffects]),    //test ali
+    ServiceWorkerModule.register('ngsw-worker.js', 
+    { enabled: environment.production,
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+ // registrationStrategy: 'registerWhenStable:30000'
+    }) 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
