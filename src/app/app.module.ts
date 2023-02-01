@@ -19,7 +19,7 @@ import { CurrentconditionsEffects } from './effects/currentconditions.effects';
     PenComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({ appState: appReducer }),
@@ -28,7 +28,9 @@ import { CurrentconditionsEffects } from './effects/currentconditions.effects';
     StoreModule.forRoot(reducers, { metaReducers }), //test ali
     !environment.production ? StoreDevtoolsModule.instrument() : [], //test ali
     EffectsModule.forFeature([CurrentconditionsEffects])  //test ali
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
