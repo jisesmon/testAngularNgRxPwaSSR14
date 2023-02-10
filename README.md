@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## branch pwa 
+
+----/pwa------------
+npx ng add angular/pwa@14.2.10
+but error  to package>> 
+npm i @angular/service-worker@14.0.4
+
+git  checkout pwa
+npm run pwa
+
+## branch SSR 
+
+----/SSR------------
+ git  checkout SSR
+
+...
